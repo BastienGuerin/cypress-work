@@ -39,7 +39,7 @@
                          @click="openLightbox()"
                     >
                         <!-- Image -->
-                        <img src="https://picsum.photos/id/301/1024/1024" />
+                        <img src="https://picsum.photos/id/301/1024/1024" data-cy="img"/>
 
                         <!-- On hover, overlay -->
                         <div class="absolute top-0 left-0 bg-black bg-opacity-60 w-full h-full"
@@ -50,6 +50,7 @@
                                 x-transition:leave="transition ease-in duration-200"
                                 x-transition:leave-start="opacity-100"
                                 x-transition:leave-end="opacity-0"
+                                
                         >
                             <!-- Overlay content -->
                             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-white">
@@ -81,6 +82,7 @@
                  x-transition:leave="transition ease-out duration-200"
                  x-transition:leave-start="opacity-100 transform translate-y-0"
                  x-transition:leave-end="opacity-0 transform -translate-y-16"
+                 
             >
                 <!-- Lightbox -->
                 <div id="lightbox"
@@ -108,7 +110,7 @@
                         </div>
 
                         <!-- Close -->
-                        <div>
+                        <div data-cy="close">
                             <svg xmlns="http://www.w3.org/2000/svg" 
                                 viewBox="0 0 24 24" 
                                 class="h-3 w-3 fill-current text-black cursor-pointer transition duration-300 hover:text-gray-400"
@@ -121,7 +123,7 @@
 
                     <!-- Image -->
                     <div>
-                        <img src="https://picsum.photos/id/301/1024/1024" class="object-cover w-full" />
+                        <img src="https://picsum.photos/id/301/1024/1024" class="object-cover w-full"/>
                     </div>
 
                     <!-- Likes  -->
